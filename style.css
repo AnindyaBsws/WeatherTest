@@ -1,0 +1,113 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navigation */
+header {
+    background-color: rgb(144, 238, 235); /* Change navigation background color to light green */
+    padding: 10px 20px;
+    position: relative;
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-btn {
+    font-size: 30px;
+    color: rgb(17, 16, 16);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.title {
+    font-size: 30px;
+    color: rgb(33, 32, 32);
+}
+
+.id-number {
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+}
+
+/* Side menu */
+.side-menu {
+    position: fixed;
+    left: -200px;
+    top: 0;
+    width: 200px;
+    height: 100%;
+    background-color: rgb(1, 157, 209);
+    transition: left 0.3s ease;
+    padding-top: 20px;
+}
+
+.side-menu ul {
+    list-style-type: none;
+}
+
+.side-menu li {
+    padding: 10px;
+}
+
+.side-menu li a {
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+}
+
+/* Weather Section */
+.weather-section {
+    margin-top: 50px;
+    padding: 20px;
+    background-color: rgb(255, 255, 255); /* Change background to light yellow */
+    text-align: center;
+}
+
+.weather-nav {
+    background-color: #ffffff;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.weather-nav h2 {
+    font-size: 24px;
+}
+
+.categories {
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 50px;
+}
+
+.category {
+    text-align: center;
+}
+
+.weather-report-box {
+    margin-top: 20px;
+}
+
+.weather-report-box button {
+    padding: 30px 50px;
+    background-color: rgb(214, 214, 152);
+    color: rgb(0, 0, 0);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.weather-report-box button:hover {
+    background-color: rgb(202, 188, 37);
+}
+
+/* Side menu toggle */
+.side-menu.show {
+    left: 0;
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Report</title>
+</head>
+<body>
+    <h1>Weather Report</h1>
+    <form id="city-form">
+        <input type="text" id="city-name" placeholder="Enter city name" required>
+        <button type="submit">Get Weather</button>
+    </form>
+
+    <div id="weather-info">
+        <!-- Weather data will be displayed here -->
+    </div>
+
+    <script>
+        document.getElementById('city-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const cityName = document.getElementById('city-name').value;
+            // Call your API to get weather data
+            // Example API: OpenWeatherMap API
+            fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=2274a84f0c8a0dd9af3011fdf1e5daaa`)
+                .then(response => response.json())
+                .then(data => {
+                    const weatherDiv = document.getElementById('weather-info');
+                    weatherDiv.innerHTML = `
+                        <p>City: ${data.name}</p>
+                        <p>Temperature: ${data.main.temp}°C</p>
+                        <p>Humidity: ${data.main.humidity}%</p>
+                        <p>Weather: ${data.weather[0].description}</p>
+                    `;
+                })
+                .catch(error => alert("Error fetching data"));
+        });
+    </script>
+</body>
+</html>

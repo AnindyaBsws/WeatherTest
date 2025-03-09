@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Monitoring System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include Gauge.js library -->
+    <script src="https://bernii.github.io/gauge.js/dist/gauge.min.js"></script>
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <div class="nav-container">
+            <button class="menu-btn" id="menu-btn">&#9776;</button>
+            <h1 class="title">Weather Monitoring System</h1>
+            <div class="id-number">ID: 01</div>
+        </div>
+    </header>
+
+    <!-- Side menu -->
+    <div class="side-menu" id="side-menu">
+        <ul>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Tutorial</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+    </div>
+
+    <!-- Weather Section -->
+    <section class="weather-section">
+        <nav class="weather-nav">
+            <h2>Current Weather</h2>
+        </nav>
+
+        <div class="categories">
+            <div class="category">
+                <!-- Gauge for Temperature -->
+                <canvas id="temp-gauge" width="150" height="150"></canvas>
+                <span>Temperature</span>
+            </div>
+            <div class="category">
+                <!-- Gauge for Humidity -->
+                <canvas id="humidity-gauge" width="150" height="150"></canvas>
+                <span>Humidity</span>
+            </div>
+            <div class="category">
+                <!-- Gauge for Rainfall -->
+                <canvas id="rainfall-gauge" width="150" height="150"></canvas>
+                <span>Rainfall</span>
+            </div>
+            <div class="category">
+                <!-- Gauge for Soil Moisture -->
+                <canvas id="soil-gauge" width="150" height="150"></canvas>
+                <span>Soil Moisture</span>
+            </div>
+        </div>
+
+        <!-- Button to open weather report -->
+        <div class="weather-report-box">
+            <button id="weather-report-btn">Arial Weather Report</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
